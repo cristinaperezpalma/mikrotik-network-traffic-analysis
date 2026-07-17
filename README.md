@@ -2,13 +2,13 @@
 
 An academic networking project focused on the deployment, configuration and analysis of a multi-router network infrastructure using MikroTik RouterOS.
 
-The project combines static routing, NetFlow traffic monitoring, Linux networking tools, Python automation and traffic engineering techniques to analyze network behavior and optimize routing decisions based on measured traffic matrices.
+The project combines static routing, NetFlow traffic monitoring, Linux networking tools, Bash automation, Python data analysis and traffic engineering techniques to analyze network behavior and optimize network capacity based on measured traffic matrices.
 
 ---
 
 # Project Overview
 
-The objective of this project was to deploy and validate a laboratory network while learning traffic engineering concepts through real traffic measurements.
+The objective of this project was to deploy, configure and validate a laboratory network while learning traffic engineering concepts through real traffic measurements.
 
 The infrastructure includes:
 
@@ -18,9 +18,10 @@ The infrastructure includes:
 - Linux-based administration
 - NetFlow v9 monitoring
 - Traffic generation using iperf
+- Bash automation
 - Python traffic analysis
 - Traffic engineering
-- Network optimization using GLPK and GNU Octave
+- Network optimization using GNU Octave and GLPK
 
 ---
 
@@ -34,9 +35,10 @@ The infrastructure includes:
 - Traffic Flow Export
 - Linux Networking
 - Traffic Generation with iperf
-- Python Automation
-- Network Traffic Analysis
-- Traffic Matrix Processing
+- Bash Automation
+- Python Data Processing
+- Traffic Matrix Generation
+- Traffic Engineering
 - Network Optimization
 
 ---
@@ -78,7 +80,7 @@ mikrotik-network-traffic-analysis/
 │   ├── 05-network-services.md
 │   ├── 06-traffic-monitoring.md
 │   ├── 07-python-automation.md
-│   ├── 08-network-validation.md
+│   └── 08-network-validation.md
 │
 ├── scripts/
 │   ├── configure-gateway.sh
@@ -93,6 +95,11 @@ mikrotik-network-traffic-analysis/
 │   └── traffic-server.sh
 │
 ├── screenshots/
+│   ├── topology.png
+│   ├── traffic-average.png
+│   ├── traffic-percentile99.png
+│   ├── average-traffic-matrix.png
+│   └── percentile99-traffic-matrix.png
 │
 ├── README.md
 └── LICENSE
@@ -104,14 +111,14 @@ mikrotik-network-traffic-analysis/
 
 | Document | Description |
 |----------|-------------|
-| 01 - Project Overview | Project objectives and scope |
-| 02 - Network Architecture | Topology, devices and network design |
-| 03 - IP Addressing | IPv4 addressing plan and subnets |
-| 04 - MikroTik Configuration | RouterOS configuration, routing and interfaces |
-| 05 - Network Services | SSH, iperf and network services |
-| 06 - Traffic Monitoring | NetFlow configuration and traffic analysis |
-| 07 - Python Automation | Traffic processing and data analysis scripts |
-| 08 - Network Validation | Testing, troubleshooting and validation |
+| 01 - Project Overview | Project objectives, scope and traffic engineering goals |
+| 02 - Network Architecture | Network topology, devices and infrastructure |
+| 03 - IP Addressing | IPv4 addressing plan and subnet allocation |
+| 04 - MikroTik Configuration | RouterOS configuration, routing and NetFlow setup |
+| 05 - Network Services | SSH administration, traffic generation and Linux services |
+| 06 - Traffic Monitoring | NetFlow collection, traffic analysis and measured data |
+| 07 - Python Automation | Traffic processing, statistics and visualization |
+| 08 - Network Validation | Connectivity tests, troubleshooting and validation |
 
 ---
 
@@ -119,49 +126,41 @@ mikrotik-network-traffic-analysis/
 
 ## Network Topology
 
-Multi-router infrastructure deployed using MikroTik RouterOS.
+Laboratory infrastructure composed of multiple MikroTik routers interconnected through three LANs.
 
 ![Topology](screenshots/topology.png)
 
 ---
 
-## Static Routing
+## Average Traffic Analysis
 
-Manual routing configuration between interconnected routers.
+Traffic collected through NetFlow was processed with Python to estimate the average traffic demand used for traffic engineering.
 
-![Routing](screenshots/routing.png)
-
----
-
-## NetFlow Monitoring
-
-Traffic Flow configured to export NetFlow v9 records to Linux collectors.
-
-![NetFlow](screenshots/netflow.png)
+![Average Traffic](screenshots/traffic-average.png)
 
 ---
 
-## Python Traffic Analysis
+## 99th Percentile Analysis
 
-Traffic data processed automatically to calculate average traffic, identify anomalies and compute the 99th percentile.
+Traffic measurements were analyzed using the 99th percentile methodology to estimate peak network demand while filtering short-lived traffic spikes.
 
-![Python](screenshots/python-analysis.png)
-
----
-
-## Traffic Engineering
-
-Measured traffic matrices were used to optimize routing decisions through GNU Octave and GLPK.
-
-![Optimization](screenshots/optimization.png)
+![99th Percentile](screenshots/traffic-percentile99.png)
 
 ---
 
-## Network Validation
+## Average Traffic Matrix
 
-Connectivity and routing were validated using ping, traceroute and iperf.
+Traffic engineering matrix generated from average traffic measurements.
 
-![Validation](screenshots/validation.png)
+![Average Matrix](screenshots/average-traffic-matrix.png)
+
+---
+
+## 99th Percentile Traffic Matrix
+
+Traffic engineering matrix generated using the 99th percentile methodology for network capacity planning.
+
+![Percentile Matrix](screenshots/percentile99-traffic-matrix.png)
 
 ---
 
@@ -174,10 +173,10 @@ This project provided hands-on experience with:
 - Linux Network Administration
 - SSH Remote Management
 - NetFlow Traffic Monitoring
-- Traffic Engineering
-- Bash Scripting
-- Python Automation
+- Bash Automation
+- Python Data Processing
 - Traffic Matrix Analysis
+- Traffic Engineering
 - GNU Octave and GLPK Optimization
 - Network Performance Evaluation
 
@@ -190,5 +189,7 @@ This project provided hands-on experience with:
 - Bash automation scripts
 - Python traffic analysis scripts
 - GNU Octave optimization files
-- Network topology and validation screenshots
-- Network testing results
+- Network topology screenshots
+- Traffic analysis results
+- Traffic engineering matrices
+- Network validation documentation
