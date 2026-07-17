@@ -67,7 +67,7 @@ Complete laboratory topology used throughout the project.
 
 # Repository Structure
 
-```
+```text
 mikrotik-network-traffic-analysis/
 │
 ├── docs/
@@ -81,6 +81,16 @@ mikrotik-network-traffic-analysis/
 │   ├── 08-network-validation.md
 │
 ├── scripts/
+│   ├── configure-gateway.sh
+│   ├── configure-netflow.sh
+│   ├── configure-netflow-export.sh
+│   ├── configure-routes.sh
+│   ├── export-netflow.sh
+│   ├── iperf-client.sh
+│   ├── iperf-server.sh
+│   ├── start-nfcapd.sh
+│   ├── traffic-client.sh
+│   └── traffic-server.sh
 │
 ├── screenshots/
 │
@@ -95,12 +105,12 @@ mikrotik-network-traffic-analysis/
 | Document | Description |
 |----------|-------------|
 | 01 - Project Overview | Project objectives and scope |
-| 02 - Network Architecture | Topology and devices |
-| 03 - IP Addressing | IPv4 addressing plan |
-| 04 - MikroTik Configuration | Routing and RouterOS configuration |
-| 05 - Network Services | SSH, NetFlow and traffic generation |
-| 06 - Traffic Monitoring | NetFlow monitoring and analysis |
-| 07 - Python Automation | Scripts and traffic processing |
+| 02 - Network Architecture | Topology, devices and network design |
+| 03 - IP Addressing | IPv4 addressing plan and subnets |
+| 04 - MikroTik Configuration | RouterOS configuration, routing and interfaces |
+| 05 - Network Services | SSH, iperf and network services |
+| 06 - Traffic Monitoring | NetFlow configuration and traffic analysis |
+| 07 - Python Automation | Traffic processing and data analysis scripts |
 | 08 - Network Validation | Testing, troubleshooting and validation |
 
 ---
@@ -131,9 +141,9 @@ Traffic Flow configured to export NetFlow v9 records to Linux collectors.
 
 ---
 
-## Traffic Analysis
+## Python Traffic Analysis
 
-Traffic processed using Python scripts to calculate averages and 99th percentile values.
+Traffic data processed automatically to calculate average traffic, identify anomalies and compute the 99th percentile.
 
 ![Python](screenshots/python-analysis.png)
 
@@ -141,7 +151,7 @@ Traffic processed using Python scripts to calculate averages and 99th percentile
 
 ## Traffic Engineering
 
-Measured traffic matrices were later used to optimize routing decisions through GNU Octave and GLPK.
+Measured traffic matrices were used to optimize routing decisions through GNU Octave and GLPK.
 
 ![Optimization](screenshots/optimization.png)
 
@@ -149,7 +159,7 @@ Measured traffic matrices were later used to optimize routing decisions through 
 
 ## Network Validation
 
-Connectivity was validated using ping, traceroute and iperf.
+Connectivity and routing were validated using ping, traceroute and iperf.
 
 ![Validation](screenshots/validation.png)
 
@@ -160,24 +170,25 @@ Connectivity was validated using ping, traceroute and iperf.
 This project provided hands-on experience with:
 
 - MikroTik RouterOS
-- Static Routing
-- Linux Networking
-- SSH Administration
-- NetFlow Monitoring
+- Static IPv4 Routing
+- Linux Network Administration
+- SSH Remote Management
+- NetFlow Traffic Monitoring
 - Traffic Engineering
-- Python Automation
 - Bash Scripting
-- Network Optimization
-- Performance Analysis
+- Python Automation
+- Traffic Matrix Analysis
+- GNU Octave and GLPK Optimization
+- Network Performance Evaluation
 
 ---
 
 # Repository Contents
 
-- Technical documentation
-- MikroTik configuration
-- Bash scripts
-- Python scripts
-- GNU Octave optimization
-- Screenshots
-- Network validation
+- Complete technical documentation
+- MikroTik RouterOS configuration
+- Bash automation scripts
+- Python traffic analysis scripts
+- GNU Octave optimization files
+- Network topology and validation screenshots
+- Network testing results
