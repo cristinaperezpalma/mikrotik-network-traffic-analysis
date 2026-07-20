@@ -1,8 +1,8 @@
 # MikroTik Network Traffic Analysis
 
-An academic networking project focused on the deployment, configuration and analysis of a multi-router network infrastructure using MikroTik RouterOS.
+An academic networking project focused on the deployment, configuration, monitoring and analysis of a multi-router network infrastructure using MikroTik RouterOS.
 
-The project combines static routing, NetFlow traffic monitoring, Linux networking tools, Bash automation, Python data analysis and traffic engineering techniques to analyze network behavior and optimize network capacity based on measured traffic matrices.
+The project combines static routing, NetFlow traffic monitoring, Linux networking tools, Bash automation, Python-based traffic analysis, and traffic engineering techniques to evaluate network behavior and optimize network capacity based on measured traffic matrices.
 
 ---
 
@@ -17,7 +17,7 @@ The infrastructure includes:
 - Static IPv4 routing
 - Linux-based administration
 - NetFlow v9 monitoring
-- Traffic generation using iperf
+- Traffic generation using iPerf
 - Bash automation
 - Python traffic analysis
 - Traffic engineering
@@ -34,7 +34,7 @@ The infrastructure includes:
 - NetFlow v9 Monitoring
 - Traffic Flow Export
 - Linux Networking
-- Traffic Generation with iperf
+- Traffic Generation with iPerf
 - Bash Automation
 - Python Data Processing
 - Traffic Matrix Generation
@@ -48,8 +48,8 @@ The infrastructure includes:
 | Category | Technologies |
 |-----------|--------------|
 | Routing | MikroTik RouterOS |
-| Monitoring | NetFlow v9, Traffic Flow |
-| Network Tools | iperf, nfcapd, nfdump |
+| Network Monitoring | NetFlow v9, Traffic Flow |
+| Network Tools | iPerf, nfcapd, nfdump |
 | Operating System | Ubuntu Linux |
 | Automation | Bash |
 | Programming | Python |
@@ -80,7 +80,7 @@ mikrotik-network-traffic-analysis/
 │   ├── 05-network-services.md
 │   ├── 06-traffic-monitoring.md
 │   ├── 07-python-automation.md
-│   └── 08-network-validation.md
+│   └── 08-network-optimization.md
 │
 ├── scripts/
 │   ├── configure-gateway.sh
@@ -118,7 +118,7 @@ mikrotik-network-traffic-analysis/
 | 05 - Network Services | SSH administration, traffic generation and Linux services |
 | 06 - Traffic Monitoring | NetFlow collection, traffic analysis and measured data |
 | 07 - Python Automation | Traffic processing, statistics and visualization |
-| 08 - Network Optimization | Linear Programming, GNU Octave, GLPK and network capacity planning ||
+| 08 - Network Optimization | Linear Programming, GNU Octave, GLPK and network capacity planning |
 
 ---
 
@@ -182,6 +182,23 @@ This project provided hands-on experience with:
 
 ---
 
+# Key Skills
+
+- Network Design
+- Static Routing
+- MikroTik RouterOS
+- Linux Networking
+- SSH Administration
+- NetFlow Monitoring
+- Bash Scripting
+- Python Data Analysis
+- Traffic Engineering
+- Capacity Planning
+- GNU Octave
+- GLPK
+
+---
+
 # Repository Contents
 
 - Complete technical documentation
@@ -191,3 +208,9 @@ This project provided hands-on experience with:
 - Traffic monitoring results
 - Traffic engineering matrices
 - Network optimization documentation
+
+---
+
+# License
+
+This project is licensed under the MIT License. See the **LICENSE** file for more information.
