@@ -8,7 +8,7 @@ The project combines static routing, NetFlow traffic monitoring, Linux networkin
 
 # Project Overview
 
-The objective of this project was to deploy, configure and validate a laboratory network while learning traffic engineering concepts through real traffic measurements.
+The objective of this project was to design, deploy, configure and validate a laboratory network while analyzing traffic behavior and applying traffic engineering techniques for network capacity planning.
 
 The infrastructure includes:
 
@@ -118,7 +118,7 @@ mikrotik-network-traffic-analysis/
 | 05 - Network Services | SSH administration, traffic generation and Linux services |
 | 06 - Traffic Monitoring | NetFlow collection, traffic analysis and measured data |
 | 07 - Python Automation | Traffic processing, statistics and visualization |
-| 08 - Network Validation | Connectivity tests, troubleshooting and validation |
+| 08 - Network Optimization | Linear Programming, GNU Octave, GLPK and network capacity planning ||
 
 ---
 
@@ -185,11 +185,9 @@ This project provided hands-on experience with:
 # Repository Contents
 
 - Complete technical documentation
-- MikroTik RouterOS configuration
+- MikroTik RouterOS configuration examples
 - Bash automation scripts
-- Python traffic analysis scripts
-- GNU Octave optimization files
 - Network topology screenshots
-- Traffic analysis results
+- Traffic monitoring results
 - Traffic engineering matrices
-- Network validation documentation
+- Network optimization documentation
